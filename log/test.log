@@ -1,0 +1,157 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 12:51:25 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 421ms (Views: 401.8ms | ActiveRecord: 0.6ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 12:51:25 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (76.3ms)
+Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 12:53:14 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 145ms (Views: 135.7ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 12:53:15 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 12:53:50 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 158ms (Views: 148.4ms | ActiveRecord: 0.4ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 12:53:51 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (24.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2016-09-24 12:53:51 -0300
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men in Black", "rating"=>"PG-13", "release_date(1i)"=>"2016", "release_date(2i)"=>"9", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 15:53:51 UTC], ["updated_at", 2016-09-24 15:53:51 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 12:55:37 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 144ms (Views: 134.6ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 12:55:37 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2016-09-24 12:55:37 -0300
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men in Black", "rating"=>"PG-13", "release_date(1i)"=>"2016", "release_date(2i)"=>"9", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 15:55:37 UTC], ["updated_at", 2016-09-24 15:55:37 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 13:10:02 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 146ms (Views: 136.1ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 13:10:02 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2016-09-24 13:10:02 -0300
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men in Black", "rating"=>"PG-13", "release_date(1i)"=>"2016", "release_date(2i)"=>"9", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 16:10:02 UTC], ["updated_at", 2016-09-24 16:10:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 13:10:48 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 145ms (Views: 135.3ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 13:10:48 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2016-09-24 13:10:48 -0300
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men in Black", "rating"=>"PG-13", "release_date(1i)"=>"2016", "release_date(2i)"=>"9", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 16:10:48 UTC], ["updated_at", 2016-09-24 16:10:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 13:11:22 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 145ms (Views: 135.5ms | ActiveRecord: 0.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2016-09-24 13:11:22 -0300
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.haml within layouts/application
+  Rendered movies/new.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2016-09-24 13:11:22 -0300
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Men in Black", "rating"=>"PG-13", "release_date(1i)"=>"2016", "release_date(2i)"=>"9", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 16:11:22 UTC], ["updated_at", 2016-09-24 16:11:22 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Men in Black"], ["rating", "PG-13"], ["release_date", 2016-09-24 00:00:00 UTC], ["created_at", 2016-09-24 16:11:22 UTC], ["updated_at", 2016-09-24 16:11:22 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+Started GET "/movies" for 127.0.0.1 at 2016-09-24 13:11:22 -0300
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
