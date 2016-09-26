@@ -6,34 +6,36 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
-  # def all_ratings
-  #   %w(G PG PG-13 NC-17 R)
-  # end
-  
   def index
-    #@movies = Movie.all #first version
-    sort = params[:sort] || session[:sort]
-    case sort
-    when 'title'
-      ordering,@title_header = {:title => :asc}, 'hilite'
-    when 'release_date'
-      ordering,@date_header = {:release_date => :asc}, 'hilite'
-    end
-     @all_ratings = Movie.all_ratings
-     @selected_ratings = params[:ratings]|| session[:ratings] || {}
-    
-     if @selected_ratings == {}
-       @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
-     end
+    @movies = Movie.all
 
-     if params[:sort] != session[:sort] or params[:ratings] != session[:ratings]
-       session[:sort] = sort
-       session[:ratings] = @selected_ratings
-       redirect_to :sort => sort, :ratings => @selected_ratings and return
-     end
-    @movies = Movie.order(ordering)
-    #@movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
-  
+    if(@checked != nil)
+      @movies = @movies.find_all{ |m| @checked.has_key?(m.rating) and @checked[m.rating]==true}
+    else 
+      
+    end
+
+    if(params[:ratings] != nil)
+      @movies = @movies.find_all{ |m| params[:ratings].has_key?(m.rating) }
+    end
+    
+    if(params[:sort].to_s == 'title')
+      @movies = @movies.sort_by{|m| m.title }
+    elsif(params[:sort].to_s == 'release')
+      @movies = @movies.sort_by{|m| m.release_date.to_s }
+    end
+
+    @checked = {}
+    @all_ratings =  ['G','PG','PG-13','R', 'NC-17']
+
+    @all_ratings.each { |rating|
+      if params[:ratings] == nil
+        @checked[rating] = false
+      else
+        @checked[rating] = params[:ratings].has_key?(rating)
+      end
+    }
+
   end
 
   def new
@@ -43,13 +45,8 @@ class MoviesController < ApplicationController
   def create
     params.permit!
     @movie = Movie.create!(params[:movie])
-    Movie.create(movie_params)
     flash[:notice] = "#{@movie.title} was successfully created."
     redirect_to movies_path
-  end
-
-  def movie_params
-    params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
 
   def edit
